@@ -1,0 +1,46 @@
+body{
+    max-width: 1400px;
+    padding: 0px;
+    margin: 0 auto;
+}
+
+.container_princ{
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 80%;
+}
+
+.container_1{
+
+    margin: 0 auto;
+    width: 80%;
+}
+
+.container_2{
+    margin: 0px;
+    padding: 0px;
+    width: 50%;
+}
+
+.btn_extremos{
+    width: 100%;
+}
+
+.lbl_extremos{
+    width: 100%;
+    font-size: 1.0rem;
+}
+
+.main_box{
+    border-radius: 5px;
+}
+
+.second_box{
+    border-radius: 5px;
+}
+
+.display_atm{
+    height: 185px;
+    width: 303px;
+}
+
