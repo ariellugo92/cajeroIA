@@ -36,7 +36,7 @@
                 <h1 class="center-align" style="color: #fff" >APP - ATM</h1>
             </div>
             <div class="row center-align">
-                <a href="#ATM" class="center-align btn-floating btn-large pulse waves-effect waves-light white "><i class="material-icons large blue-text">keyboard_arrow_down</i></a>
+                <a href="#pnlNumerico" class="center-align btn-floating btn-large pulse waves-effect waves-light white "><i class="material-icons large blue-text">keyboard_arrow_down</i></a>
             </div>
         </div>
     </div>

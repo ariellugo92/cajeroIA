@@ -11,6 +11,6 @@ class retiroControlador extends Controller
     // metodo para la transaccion de retirar el dinero
     public function retirar(Request $request)
     {
-        # code...
+        # 
     }
 }
