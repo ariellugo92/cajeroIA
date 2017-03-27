@@ -8,10 +8,10 @@ class RetiroCordoba extends Model
 {
     //datos fileables
     protected $fillable = [
-        'idCliente', 'tipoMoneda'
+        'idRetiro', 'idDenominacionCordoba', 'cantidad'
     ];
 
-    protected $table = 'retiro';
+    protected $table = 'retiro_cordoba';
 
     public $timestamps = true;
 
