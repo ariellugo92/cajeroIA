@@ -79,7 +79,8 @@ $(document).ready(function () {
                 switch (response.val) {
                     case '1':
                         // si los datos son correctos
-                        console.log('el pin es correcto');
+                        // mandar a la pantalla de opciones
+                        opcionesIniciales();
                         break;
 
                     case '0':
@@ -106,6 +107,12 @@ $(document).ready(function () {
     function setErrorShow(err, color) {
         var html = "<p style='color:" + color + ";'>" + err + "</p>";
         $('#errors').html(html);
+    }
+
+    // funcion para mostrar las opciones iniciales (primer menu)
+    function opcionesIniciales() {
+        // cambiando los labels de la izquierda
+        
     }
 
 });
