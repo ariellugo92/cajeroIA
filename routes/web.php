@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function(){
+    return view('retiros.retiroATM');
+});
+
+Route::group(['prefix' => 'retiros'], function(){
+    Route::get('/', 'clienteControlador@valPin');
 });

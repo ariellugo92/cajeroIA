@@ -1,4 +1,4 @@
- $(document).ready(function(){
-      $('.parallax').parallax();
-      $('.scrollspy').scrollSpy();
-    });
+$(document).ready(function () {
+  $('.parallax').parallax();
+  $('.scrollspy').scrollSpy();
+});
