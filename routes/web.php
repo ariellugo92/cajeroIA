@@ -17,4 +17,5 @@ Route::get('/', function(){
 
 Route::group(['prefix' => 'retiros'], function(){
     Route::get('/', 'clienteControlador@valPin');
+    Route::post('/retirar', 'retiros\retiroControlador@retirar');
 });

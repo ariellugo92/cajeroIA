@@ -20,7 +20,7 @@ class clienteControlador extends Controller
         $valPinClient = Cliente::valPinClient($pin);
         if($valPinClient){
             // si el pin es correcto
-            session(['pinConect' => $pin]);
+            // session(['pinConect' => $pin]);
             return response()->json(['val' => '1']);
         }
         

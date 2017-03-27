@@ -54,11 +54,11 @@
 
                         <!-- Inicio pantalla  -->
                         <div class="col s6 lighten-3 card-panel">
-                            <div class="display_atm">
+                            <div class="display_atm" id="pnlCentral">
 
-                                <p>Ingrese su numero PIN</p>
+                                <p id="txtMensaje">Ingrese su numero PIN</p>
                                 <input id="pantallaPin" type="text" value="0" disabled>
-                                <div class="container center-align">
+                                <div class="container center-align" id="pnlNumerico">
                                     <div class="row">
                                         <div class="col s4">
                                             <a id="btn_num9" class="waves-effect waves-teal btn-flat">9</a>
@@ -108,6 +108,7 @@
                                     </div>
                                 </div>
                             </div>
+                            {{-- /display_atm --}}
                         </div>
                         <!--Fin pantalla -->
 
@@ -156,6 +157,6 @@
 @endsection
 
 @section('section-scripts')
-    {{ Html::script(asset('js/componentes/panel_numerico.js')) }}
+    {{-- {{ Html::script(asset('js/componentes/panel_numerico.js')) }} --}}
     {{ Html::script(asset('js/componentes/manejo_labels.js')) }}
 @endsection
