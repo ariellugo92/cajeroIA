@@ -21,8 +21,11 @@ class retiroControlador extends Controller
             $totalCordobas = denominacionCordobaControlador::getTotalCordobasActivos();
             if($totalCordobas > $cant){
                 # empezar a repartir el dinero
-                $repartir = 
+                $repartir = retiroCordobaControlador::initDistribucionDinero($cant);
+                return response()->json(['val' => $repartir]);
             }
+
+            return response()->json(['val' => 'no hay dinero']);
         }
     }
 }

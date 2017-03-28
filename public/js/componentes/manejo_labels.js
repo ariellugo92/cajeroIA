@@ -198,12 +198,32 @@ $(document).ready(function () {
         }
 
         // validando por ajax si el pin es correcto
-        var ruta = 'retiros/';
+        var ruta = '/retiros';
         var dato = pinValue;
         var parametro = {
             param: dato
         };
         get_ajax(ruta, parametro, 'get');
+    }
+
+    // iniciando el retiro del dinero
+    function initRetiro(){
+        // validando que la cantidad no sea 0
+        var cantidad = $('#pantallaPin').val();
+        if(cantidad == '0'){
+            setErrorShow('La cantidad a retirar tiene que ser mayor a 0', 'red');
+            return;
+        }
+
+        var ruta = '/retiros/retirar';
+        var tipoModena = flagCordoba ? 'cordoba' : 'dolar';
+        var cantRetiro = $('#pantallaPin').val();
+        var parametro = {
+            tipo: tipoModena,
+            cant: cantRetiro
+        };
+
+        get_ajax(ruta, parametro, 'post');
     }
 
     // metodo para enviar el ajax
@@ -257,6 +277,7 @@ $(document).ready(function () {
                 }
             },
             error: function (response) {
+                console.log('entro aqui! ' + response);
                 setErrorShow('Ocurrio un error al tratar de conectar con el servidor, intentelo mas tarde!', 'red')
             }
         });// fin ajax
@@ -322,26 +343,6 @@ $(document).ready(function () {
         $('#txtMensaje').text('Ingrese la cantidad a retirar');
         $('#pantallaPin').fadeIn();
         $('#pnlNumerico').fadeIn();
-    }
-
-    // iniciando el retiro del dinero
-    function initRetiro(){
-        // validando que la cantidad no sea 0
-        var cantidad = $('#pantallaPin').val();
-        if(cantidad == '0'){
-            setErrorShow('La cantidad a retirar tiene que ser mayor a 0', 'red');
-            return;
-        }
-
-        var ruta = 'retiros/retirar';
-        var tipoModena = flagCordoba ? 'cardoba' : 'dolar';
-        var cantRetiro = $('#pantallaPin').val();
-        var parametro = {
-            tipo : tipoModena,
-            cant : cantRetiro
-        }
-
-        get_ajax(ruta, parametro, 'post');
     }
 
     // opciones para borrar la pantalla
